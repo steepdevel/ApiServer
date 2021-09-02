@@ -142,7 +142,7 @@ def supply_plain():
 @blueprint.route("/price", methods=["GET"])
 def price():
     data = General.price()
-    return jsonify(utils.response(data["microbitcoin"]))
+    return jsonify(utils.response(data["Steepcoin"]))
 
 def init(app):
     app.register_blueprint(blueprint, url_prefix="/")

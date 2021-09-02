@@ -1,7 +1,7 @@
 # Getting started
 --------------
 
-We have RESTful API which help you fetch info about MicroBitcoin blockchain and interact with it. This api is fetching data directrly from the full node with addres and transaction indexes enabled. Our [explorer](https://steepcoin.github.io/explorer) and [web wallet](https://steepcoin.github.io/wallet) is using this api.
+We have RESTful API which help you fetch info about Steepcoin blockchain and interact with it. This api is fetching data directrly from the full node with address and transaction indexes enabled. Our [explorer](https://steepcoin.github.io/explorer) and [web wallet](https://steepcoin.github.io/wallet) is using this api.
 
 # How to use it?
 --------------
@@ -19,7 +19,7 @@ debug = True
 ssl = 'well known token'
 ```
 
-All request should be send to this endpoint: `https://api.mbc.wiki`
+All request should be send to this endpoint: `https://api.steepcoin.money`
 
 Responce have following fields:
 
@@ -38,7 +38,7 @@ This method return current info about steepcoin blockchain.
 
 Params: none
 
-Request: https://api.mbc.wiki/info
+Request: https://api.steepcoin.money/info
 
 Responce:
 ```
@@ -66,7 +66,7 @@ Params:
 `offset`: offset of transactions list (default: 0)
 `hash`: return only hash of the block (default: false)
 
-Request: https://api.mbc.wiki/height/0
+Request: https://api.steepcoin.money/height/0
 
 Responce:
 ```
@@ -99,7 +99,7 @@ Responce:
 }
 ```
 
-Request: https://api.mbc.wiki/height/0
+Request: https://api.steepcoin.money/height/0
 
 Responce:
 ```
@@ -117,7 +117,7 @@ This method return block info by given hash.
 Params:
 `offset`: offset of transactions list (default: 0)
 
-Request: https://api.mbc.wiki/block/14c03ecf20edc9887fb98bf34b53809f063fc491e73f588961f764fac88ecbae
+Request: https://api.steepcoin.money/block/14c03ecf20edc9887fb98bf34b53809f063fc491e73f588961f764fac88ecbae
 
 Responce:
 ```
@@ -156,7 +156,7 @@ This method return block header by given hash.
 
 Params: none
 
-Request: https://api.mbc.wiki/header/14c03ecf20edc9887fb98bf34b53809f063fc491e73f588961f764fac88ecbae
+Request: https://api.steepcoin.money/header/14c03ecf20edc9887fb98bf34b53809f063fc491e73f588961f764fac88ecbae
 
 Responce:
 ```
@@ -189,7 +189,7 @@ This method return range of blocks staring from certain height.
 Params:
 `offset`: number of blocks required (default: 30)
 
-Request: https://api.mbc.wiki/range/100
+Request: https://api.steepcoin.money/range/100
 
 Responce:
 ```
@@ -233,7 +233,7 @@ This method return address balance.
 
 Params: none
 
-Request: https://api.mbc.wiki/balance/BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH
+Request: https://api.steepcoin.money/balance/sf2VUkgg167RiJ9f6JmQAi568s3TSQJLBd
 
 Responce:
 ```
@@ -254,7 +254,7 @@ This method return address mempool transactions.
 
 Params: none
 
-Request: https://api.mbc.wiki/mempool/BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH
+Request: https://api.steepcoin.money/mempool/sf2VUkgg167RiJ9f6JmQAi568s3TSQJLBd
 
 Responce:
 ```
@@ -282,7 +282,7 @@ This method return address unspent outputs.
 Params:
 `amount`: amount which you want to spend (default: 0 will return all utxos)
 
-Request: https://api.mbc.wiki/unspent/BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH
+Request: https://api.steepcoin.money/unspent/sf2VUkgg167RiJ9f6JmQAi568s3TSQJLBd
 
 Responce:
 ```
@@ -309,7 +309,7 @@ This method return list of address transaction hashes.
 Params:
 `offset`: offset of transactions list (default: 0)
 
-Request: https://api.mbc.wiki/history/BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH
+Request: https://api.steepcoin.money/history/sf2VUkgg167RiJ9f6JmQAi568s3TSQJLBd
 
 Responce:
 ```
@@ -337,7 +337,7 @@ This method return info about transaction.
 
 Params: none
 
-Request: https://api.mbc.wiki/transaction/957fc74933dcfc7da179bd53d01b2a7f8ffda4daa7a39b83656acf52ef772070
+Request: https://api.steepcoin.money/transaction/957fc74933dcfc7da179bd53d01b2a7f8ffda4daa7a39b83656acf52ef772070
 
 Responce:
 ```
@@ -381,7 +381,7 @@ Responce:
                     "reqSigs": 1,
                     "type": "pubkeyhash",
                     "addresses": [
-                        "BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH"
+                        "sf2VUkgg167RiJ9f6JmQAi568s3TSQJLBd"
                     ]
                 }
             },
@@ -418,7 +418,7 @@ This method return decoded info about transaction.
 
 Params: none
 
-Request: https://api.mbc.wiki/decode/0100000001c8c14eceaa84c5b45e28b4ab43bb1354960e5cf65ee480a281ebdce66e4f84cb010000006b483045022100bcf51d6111d3f23a23689d1956e010433e4ea65a3680211e5e442e229ccedd59022049e89b4762788d1718ebc5f6c300d2a898f161f22e08a6a8e55b96fb555865220121021121f5e63f7537a6c8e8881b0c54c5914cd117e775c3be0486205c45eced9117fdffffff02e8030000000000001976a9147fd7e409fc303e407a933b3392aa197c66348da688ac78630100000000001976a914436072406255f648da990ea1fa902cb98c4b6e2088ac00000000
+Request: https://api.steepcoin.money/decode/0100000001c8c14eceaa84c5b45e28b4ab43bb1354960e5cf65ee480a281ebdce66e4f84cb010000006b483045022100bcf51d6111d3f23a23689d1956e010433e4ea65a3680211e5e442e229ccedd59022049e89b4762788d1718ebc5f6c300d2a898f161f22e08a6a8e55b96fb555865220121021121f5e63f7537a6c8e8881b0c54c5914cd117e775c3be0486205c45eced9117fdffffff02e8030000000000001976a9147fd7e409fc303e407a933b3392aa197c66348da688ac78630100000000001976a914436072406255f648da990ea1fa902cb98c4b6e2088ac00000000
 
 Responce:
 ```
@@ -452,7 +452,7 @@ Responce:
                     "reqSigs": 1,
                     "type": "pubkeyhash",
                     "addresses": [
-                        "BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH"
+                        "sf2VUkgg167RiJ9f6JmQAi568s3TSQJLBd"
                     ]
                 }
             },
@@ -482,7 +482,7 @@ This method return info about mempool.
 
 Params: none
 
-Request: https://api.mbc.wiki/mempool
+Request: https://api.steepcoin.money/mempool
 
 Responce:
 ```
@@ -507,7 +507,7 @@ This method return info about current coins supply.
 
 Params: none
 
-Request: https://api.mbc.wiki/supply
+Request: https://api.steepcoin.money/supply
 
 Responce:
 ```
@@ -527,7 +527,7 @@ This method return recomended transaction fee.
 
 Params: none
 
-Request: https://api.mbc.wiki/fee
+Request: https://api.steepcoin.money/fee
 
 Responce:
 ```
@@ -543,13 +543,13 @@ Responce:
 
 ## /broadcast
 
-This methon broadcast raw signed transaction to MicroBitcoin network.
+This methon broadcast raw signed transaction to Steepcoin network.
 Keep in mind that you have to user **POST** request for this method!
 
 Params:
 `raw`: raw signed transaction
 
-Request: https://api.mbc.wiki/broadcast
+Request: https://api.steepcoin.money/broadcast
 `raw`: `01000000010175b5e960976058cd81d62893246b54fd52a0f074ec63c4fafd9f460e779e27010000006b48304502210092ac0108461dec3d90c31781ccac868ebb876a2e09939793581d20d733369c6002207473120c0150e1777ee700da88b833ecfb1805cd629a18d29509fad0d03a97970121021121f5e63f7537a6c8e8881b0c54c5914cd117e775c3be0486205c45eced9117fdffffff0210270000000000001976a9147fd7e409fc303e407a933b3392aa197c66348da688ac880d0100000000001976a914436072406255f648da990ea1fa902cb98c4b6e2088ac00000000`
 
 Responce:

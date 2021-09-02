@@ -77,5 +77,5 @@ class General:
 
     @classmethod
     def price(cls):
-        link = "https://api.coingecko.com/api/v3/simple/price?ids=microbitcoin&vs_currencies=usd,btc,krw"
+        link = "https://api.coingecko.com/api/v3/simple/price?ids=Steepcoin&vs_currencies=usd,btc,krw"
         return requests.get(link).json()

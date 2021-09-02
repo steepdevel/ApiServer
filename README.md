@@ -1,7 +1,7 @@
 # Getting started
 --------------
 
-We have RESTful API which help you fetch info about MicroBitcoin blockchain and interact with it. This api is fetching data directrly from the full node with addres and transaction indexes enabled. Our [explorer](https://microbitcoinorg.github.io/explorer) and [web wallet](https://microbitcoinorg.github.io/wallet) is using this api.
+We have RESTful API which help you fetch info about MicroBitcoin blockchain and interact with it. This api is fetching data directrly from the full node with addres and transaction indexes enabled. Our [explorer](https://steepcoin.github.io/explorer) and [web wallet](https://steepcoin.github.io/wallet) is using this api.
 
 # How to use it?
 --------------
@@ -12,7 +12,7 @@ First of all you have to create `config.py` file in root of project directory wi
 rid = 'api-server'
 cache = 3600  # Cache request for 1 hour
 secret = 'Lorem ipsum dolor sit amet.'
-endpoint = 'http://rpcuser:rpcpassword@127.0.0.1:6501/'
+endpoint = 'http://rpcuser:rpcpassword@127.0.0.1:36467/'
 host = '0.0.0.0'
 port = 1234
 debug = True
@@ -34,7 +34,7 @@ P.s. keep in mind, that all amounts in this API should be in **Satoshis**.
 
 ## /info
 
-This method return current info about MicroBitcoin blockchain.
+This method return current info about steepcoin blockchain.
 
 Params: none
 
